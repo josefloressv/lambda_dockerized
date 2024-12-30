@@ -11,6 +11,8 @@ class EnvController(private val envConfig: EnvConfig) {
     @GetMapping("/")
     fun index(model: Model): String {
         model.addAttribute("myEnvVar", envConfig.myEnvVar)
+        model.addAttribute("sec1", envConfig.sec1)
+        model.addAttribute("sec2", envConfig.sec2)
         return "index"
     }
 }
