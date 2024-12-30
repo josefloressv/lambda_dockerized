@@ -14,6 +14,7 @@ class EnvConfig(private val awsSecretsManagerService: AwsSecretsManagerService) 
 
     lateinit var sec1: String
     lateinit var sec2: String
+    lateinit var param1: String
 
     @PostConstruct
     fun init() {
@@ -26,5 +27,7 @@ class EnvConfig(private val awsSecretsManagerService: AwsSecretsManagerService) 
             sec1 = "default_sec1"
             sec2 = "default_sec2"
         }
+
+        param1 = awsSecretsManagerService.getParameter("/dev/lambdapoc/param1") ?: "default_param1"
     }
 }

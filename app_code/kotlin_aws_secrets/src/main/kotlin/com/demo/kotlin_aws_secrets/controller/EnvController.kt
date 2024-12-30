@@ -13,6 +13,7 @@ class EnvController(private val envConfig: EnvConfig) {
         model.addAttribute("myEnvVar", envConfig.myEnvVar)
         model.addAttribute("sec1", envConfig.sec1)
         model.addAttribute("sec2", envConfig.sec2)
+        model.addAttribute("param1", envConfig.param1)
         return "index"
     }
 }
