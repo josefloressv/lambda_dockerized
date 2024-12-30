@@ -37,6 +37,9 @@ This is a Kotlin-based Spring Boot application that demonstrates how to manage A
 3. **Run the application**:
     ```sh
     ./gradlew bootRun
+
+    # Run with variables
+    MY_ENV_VAR=hello_world ./gradlew bootRun
     ```
 
 4. **Access the application**:
